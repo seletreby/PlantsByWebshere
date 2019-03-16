@@ -20,7 +20,7 @@ Sat Mar 16 05:20:13 UTC 2019--><server>
             <file name="/config/lib/derby.jar"/>
         </library>
     </jdbcDriver>
-    <-- <dataSource id="DefaultEJBTimerDataSource" jdbcDriverRef="Derby_JDBC_Provider_(XA)" jndiName="jdbc/DefaultEJBTimerDataSource">
+    <!-- <dataSource id="DefaultEJBTimerDataSource" jdbcDriverRef="Derby_JDBC_Provider_(XA)" jndiName="jdbc/DefaultEJBTimerDataSource">
         <properties.derby.embedded category="default" connectionAttributes="upgrade=true" databaseName="${USER_INSTALL_ROOT}/databases/EJBTimers/${SERVER}/EJBTimerDB" name="DefaultEJBTimerDataSource" preTestSQLString=""/>
         <connectionManager agedTimeout="0" connectionTimeout="1800" maxIdleTime="1800" maxPoolSize="30" minPoolSize="1" reapTime="180"/>
     </dataSource> -->
