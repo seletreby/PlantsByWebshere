@@ -3,7 +3,7 @@
 
 
 #IMAGE: Get the base image for Liberty
-FROM websphere-liberty:webProfile7
+FROM websphere-liberty:webProfile6
 
 USER root
 #BINARIES: Add in all necessary application binaries
@@ -11,6 +11,7 @@ COPY ./server.xml /config
 COPY Dockerfile ./binary/application/* /config/apps/
 RUN mkdir /config/lib
 COPY Dockerfile ./binary/lib/* /config/lib/
+COPY ./binary/lib/PLANTSDB /config/lib/PLANTSDB
 RUN mkdir -p /config/../../shared/config/lib/global
 RUN cp /config/lib/* /config/../../shared/config/lib/global/
 RUN chmod -R 755 /config/../../shared
