@@ -19,7 +19,18 @@ RUN chmod -R 755 /config/../../shared
 #FEATURES: Install any features that are required
 RUN apt-get update && apt-get dist-upgrade -y \
 && rm -rf /var/lib/apt/lists/* 
-RUN /opt/ibm/wlp/bin/installUtility install  --acceptLicense defaultServer
+RUN /opt/ibm/wlp/bin/installUtility install  --acceptLicense defaultServer  \
+	jsp-2.3 \
+	ejbLite-3.2 \
+	ejbRemote-3.2 \
+	servlet-3.1 \
+	jsf-2.2 \
+	beanValidation-1.1 \
+	jndi-1.0 \
+	cdi-1.2 \
+	jpa-2.0 \
+	javaMail-1.5 \
+	el-3.0; exit 0
 
 
 # Upgrade to production license if URL to JAR provided
